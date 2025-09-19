@@ -1,50 +1,70 @@
-# Welcome to your Expo app 👋
+# 📋 Tarefas Simples — Projeto React Native com Expo Router
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Este é um app básico feito com **React Native + Expo**, criado para praticar os conceitos de:
 
-## Get started
+- **Estado Local (`useState`)**
+- **Estado Global com Context API (tema claro/escuro)**
+- **Navegação entre telas (Tabs + Stack)**
+- **Listas com `FlatList`**
+- **Formulário com validação**
+- **Passagem de dados entre telas**
+- **Feedback visual: `ActivityIndicator`, `Alert`**
+- **Acessibilidade básica**
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## 📱 O que o app faz
 
-2. Start the app
+- **Home (Tarefas)**
+  - Campo para digitar o nome da tarefa
+  - Botão para **adicionar tarefa**
+  - Se o campo estiver vazio, mostra um **alerta**
+  - Lista com tarefas (FlatList)
+    - **Favoritar**
+    - **Remover**
+    - **Ver detalhes**
 
-   ```bash
-   npx expo start
-   ```
+- **Tela de Detalhe**
+  - Mostra o ID, título e se a tarefa está favoritada
+  - Botão para **voltar**
 
-In the output, you'll find options to open the app in a
+- **Config/Sobre**
+  - Botão para **trocar o tema** (claro/escuro)
+  - Texto explicando o app
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## ✅ Requisitos da atividade (todos cumpridos)
 
-## Get a fresh project
+- [x] Múltiplas telas: Home, Detalhe, Config/Sobre  
+- [x] Navegação com **Tabs** e **Stack**  
+- [x] Uso de **`useState`** para campos, listas e loading  
+- [x] Atualização de estado (adicionar, remover, favoritar, mudar tema)  
+- [x] Lista com **FlatList**  
+- [x] Validação simples (campo obrigatório com `Alert`)  
+- [x] Passagem de dados entre telas (`params`)  
+- [x] Uso de `ActivityIndicator` (carregando)  
+- [x] Layout com Flexbox  
+- [x] Acessibilidade básica (`accessibilityLabel` em botões)
 
-When you're ready, run:
+---
+
+## 🛠️ Como rodar o projeto localmente
+
+### Pré-requisitos:
+- Ter o **Node.js** instalado
+- Ter o app **Expo Go** no celular
+- Ter o **Git** instalado (opcional)
+
+### Passos:
 
 ```bash
-npm run reset-project
-```
+# 1. Instalar dependências
+npm install
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+# 2. Instalar bibliotecas de navegação
+npm install expo-router @expo/vector-icons
+npx expo install react-native-screens react-native-safe-area-context
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+# 3. Rodar o projeto
+npm run start
